@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jacknorquist/portfolio-app#readme",
   "dependencies": {
+    "bootstrap": "^5.3.0",
     "express": "^4.18.2"
   }
 }

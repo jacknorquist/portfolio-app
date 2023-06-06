@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SideBar from './Components/Sidebar/SideBar.jsx';
+import NewFishPopup from './Components/NewFishPopUp/NewFishPopUp.jsx';
 
 class App extends Component {
 state = {
-    data: null
+    data: null,
   };
 
   componentDidMount() {
-    this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
+    if (!this.state.data) {
+      this.callBackendAPI()
+        .then(res => this.setState({ data: res.express }))
+        .catch(err => console.log(err));
+    }
   }
     // fetching the GET route from the Express server which matches the GET route from server.js
   callBackendAPI = async () => {
@@ -27,8 +31,10 @@ state = {
     return (
       <div className="App">
         <header className="App-header">
+        <SideBar/>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React Jack</h1>
+          <h1 className="App-title">Welcome to React Jack235</h1>
+          <h2>Lets Make an App</h2>
         </header>
         <p className="App-intro">{this.state.data}</p>
       </div>
