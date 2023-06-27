@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import SideBar from './Components/Sidebar/SideBar.jsx';
 import NewFishPopup from './Components/NewFishPopUp/NewFishPopUp.jsx';
+import OpeningPage from './Components/Mainpage/MainPage.jsx'; 
 
 class App extends Component {
 state = {
@@ -31,12 +32,10 @@ state = {
     return (
       <div className="App">
         <header className="App-header">
+        <OpeningPage />
         <SideBar/>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React Jack235</h1>
-          <h2>Lets Make an App</h2>
         </header>
-        <p className="App-intro">{this.state.data}</p>
+        
       </div>
     );
   }

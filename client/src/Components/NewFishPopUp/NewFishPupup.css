@@ -1,4 +1,27 @@
-form{
+.popup-container {
     position: fixed;
-    margin:auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28vw;
+    height: 28vw;
+    z-index: 10;
+    display: block;
+    border: 3px solid black;
+    border-radius: 6px;
+    display: flex;
+    background-color: aliceblue;
+  }
+  form {
+    display: block;
+    margin: auto;
+  }
+
+.form-div{
+    display: flex;
+}
+
+input {
+    align-items: center;
+    text-align: center;
 }
